@@ -1,4 +1,4 @@
-#tuplas - coleção mais simples do python
+#tuplas - coleção mais simples do python - imutavel---------------------------------------------------------------------
 people = ['Goku', 'Vegeta', 'Trunks', 'Gohan']
 print(people[1])
 # slicing de dados
@@ -21,3 +21,44 @@ print(paises)
 print('indice negativo:', paises[-2])
 for pais in paises:
     print(pais)
+
+#listas - mutavel ------------------------------------------------------------------------------------------------------
+frutas = ['apple', 'banana', 'pear']
+#add elementos
+frutas.append('grapes')
+frutas.insert(1, 'pineapple')
+print(frutas)
+
+#deletar elementos
+frutas.pop(2)
+frutas.remove('pineapple')
+
+#alterar elementos
+frutas[2] = 'peach'
+print(frutas)
+
+#conjuntos(sets) - não aceita dados repetidos --------------------------------------------------------------------------
+langs = {'english', 'portuguese', 'french', 'french'}
+
+# add dados
+langs.add('german')
+langs.update(frutas)  # adiciona uma coleção dentro do set
+langs.remove('portuguese')
+print(langs)
+
+# dicionario - usa indices customizaveis -------------------------------------------------------------------------------
+estados = {'MG':'Minas Gerais', 'AL':'Alagoas', 'TO':'Tocantins'}
+pessoa = {'nome': 'Uttoni', 'idade': 21}
+
+pessoa['cidade'] = 'Borda da Mata' # adiciona porque não tem
+pessoa['idade'] = 22 # altera o valor porque tem o índice idade
+pessoa.pop('nome') # remove o valor passado o índice
+
+print(estados)
+print(pessoa)
+
+#Casting - conversões
+frutasSet = set(frutas)
+langsList = list(langs)
+frutasTuple = tuple(frutas)
+
